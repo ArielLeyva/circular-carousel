@@ -8,12 +8,9 @@ A circular-style carousel built with **HTML + Tailwind CSS**, available in two i
 ---
 
 ## Preview
-
-
+Show live demo [here](https://arielleyva.github.io/circular-carousel/).
 
 https://github.com/user-attachments/assets/01fb2b73-ff89-438e-9ef1-6b82b9ff222c
-
-
 
 ---
 
