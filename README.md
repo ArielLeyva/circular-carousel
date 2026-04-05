@@ -9,7 +9,11 @@ A circular-style carousel built with **HTML + Tailwind CSS**, available in two i
 
 ## Preview
 
-<video src="./src/preview.mp4" controls width="100%"></video>
+
+
+https://github.com/user-attachments/assets/01fb2b73-ff89-438e-9ef1-6b82b9ff222c
+
+
 
 ---
 
