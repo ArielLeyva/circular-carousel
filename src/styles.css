@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter Variable", sans-serif;
+  font-weight: 700;
+}
+
+.carousel-container {
+  --rotate-timing-function: linear(0, 0.417 25.5%, 0.867 49.4%, 1 57.7%, 0.925 65.1%, 0.908 68.6%, 0.902 72.2%, 0.916 78.2%, 0.988 92.1%, 1);
+
+  --current: 0;
+
+  /* You can remove this if you use Javascript-Version */
+  --slide-visibility-1: none;
+  --slide-visibility-2: none;
+  --slide-visibility-3: none;
+  --slide-visibility-4: none;
+
+
+  &:has(#slide-1:checked) {
+    --slide-visibility-1: block;
+    --current: 0;
+  }
+
+  &:has(#slide-2:checked) {
+    --slide-visibility-2: block;
+    --current: 1;
+  }
+  &:has(#slide-3:checked) {
+    --slide-visibility-3: block;
+    --current: 2;
+  }
+  &:has(#slide-4:checked) {
+    --slide-visibility-4: block;
+    --current: 3;
+  }
+
+  .slide-1-label {
+    display: var(--slide-visibility-1);
+  }
+
+  .slide-2-label {
+    display: var(--slide-visibility-2);
+  }
+
+  .slide-3-label {
+    display: var(--slide-visibility-3);
+  }
+  /* You can delete up to this point */
+
+  .slide-4-label {
+    display: var(--slide-visibility-4);
+  }
+
+  /* This part is used by both versions (CSS-Only and Javascript) */
+  .images-container {
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: var(--rotate-timing-function);
+    transform: rotate(calc(var(--current) * 90deg));
+  }
+
+  .images-container img {
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  }
+
+  .texts-container {
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: var(--rotate-timing-function);
+    transform: translateX(calc(var(--current) * 25% * -1));
+  }
+}
